@@ -143,6 +143,8 @@ set autoread
 
 set wrap linebreak nolist
 
+" Set wrapping to preserve indents
+set bri
 
 
 " Enable syntax highlighting
