@@ -25,6 +25,8 @@ Plugin 'vim-syntastic/syntastic'
 Bundle 'Valloric/YouCompleteMe'
 " file browsing
 Plugin 'scrooloose/nerdtree'
+" latex plugin
+Plugin 'xuhdev/vim-latex-live-preview'
 " plugin from http://vim-scripts.org/vim/scripts.html
 " Plugin 'L9'
 " Git plugin not hosted on GitHub
@@ -153,7 +155,7 @@ syntax enable
 
 " colorscheme molokai
 " colorscheme shadesofamber
-colorscheme eldar
+" colorscheme eldar
 
 
 filetype plugin indent on
@@ -163,7 +165,8 @@ filetype plugin indent on
 set shiftwidth=2
 set tabstop=2
 
-
+" Turn on latex compiling
+nnoremap <C-C> :LLPStartPreview<CR>
 
 " Use -/= to backward/forward for buffers
 
@@ -173,19 +176,13 @@ nnoremap _ :bprev<CR>
 nnoremap + :bnext<CR>
 nnoremap = :bnext<CR>
 
-
-
 " Toggle wrapping
 
 nnoremap <Leader>w :set wrap!<CR>
 
-
-
 " Turn off the swap files
 
 set noswapfile
-
-
 
 " Turn backup off, since most stuff is in SVN, git et.c anyway...
 
